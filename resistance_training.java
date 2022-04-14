@@ -1,3 +1,4 @@
-public class resistance_training {
+public class resistance_training 
+{
     
 }
