@@ -1,4 +1,4 @@
-public class walking_and_running 
+public class walking_and_running extends exercise
 {
     private float duration;
     private float pace;

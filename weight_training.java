@@ -1,5 +1,5 @@
 
-public class weight_training
+public class weight_training extends strength_training
 {
     private float weight;
 
