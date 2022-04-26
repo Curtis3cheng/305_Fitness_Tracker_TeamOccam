@@ -1,6 +1,6 @@
 // superclass
 
-public class person
+public class person extends Object
 {
     private String name;
     private float height;

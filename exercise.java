@@ -1,4 +1,4 @@
-public class exercise
+public class exercise extends Object
 {
     private String name;
     private String musclesUsed;
