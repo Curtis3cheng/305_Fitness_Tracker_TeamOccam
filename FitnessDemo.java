@@ -17,6 +17,7 @@ public class FitnessDemo
         Scanner userInput = new Scanner(System.in);
         System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account \n");
         String loginChoice = userInput.next();
+        userInput.nextLine();
         if (loginChoice.equals("1"))
         {
             //new function loadData()
@@ -25,14 +26,19 @@ public class FitnessDemo
         {
             System.out.print("Please enter your name: ");
             String name = userInput.nextLine();
+            
             System.out.print("\nPlease enter your height: ");
             float height = userInput.nextFloat();
+            userInput.nextLine();
             System.out.print("\nPlease enter your weight: ");
             float weight = userInput.nextFloat();
+            userInput.nextLine();
             System.out.print("\nPlease enter your gender: ");
             String gender = userInput.nextLine();
+            
             System.out.print("\nPlease enter your age: ");
             int age = userInput.nextInt();
+            
 
             Person newMember = new Person(name, height, weight, gender, age);
             System.out.println(newMember);
