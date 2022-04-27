@@ -24,13 +24,13 @@ public class FitnessDemo
         else 
         {
             System.out.print("Please enter your name: ");
-            String name = userInput.next();
+            String name = userInput.nextLine();
             System.out.print("\nPlease enter your height: ");
             float height = userInput.nextFloat();
             System.out.print("\nPlease enter your weight: ");
             float weight = userInput.nextFloat();
             System.out.print("\nPlease enter your gender: ");
-            String gender = userInput.next();
+            String gender = userInput.nextLine();
             System.out.print("\nPlease enter your age: ");
             int age = userInput.nextInt();
 
