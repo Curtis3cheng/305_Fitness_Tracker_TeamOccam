@@ -94,7 +94,7 @@ public class Person extends Object //Person
 
 
     // This will write the persons workoutsinto a file so that a person can load their workouts
-    public void writeWorkoutslToFile()
+    public void writeWorkoutsToFile()
     {
         System.out.println("Code this later");
     }
