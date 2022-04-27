@@ -10,6 +10,14 @@ public class Person extends Object //Person
     private Object[] workoutHistory;
 
 
+    public Person(String name, float height, float weight, String gender, float age)
+    {
+        this.name = name;
+        this.height = height;
+        this.weight = weight;
+        this.gender = gender;
+        this.age = age;
+    }
     // Name getter and setter
     public String getName()
     {
