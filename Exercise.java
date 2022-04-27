@@ -6,6 +6,14 @@ public class Exercise extends Object //Exercise
     private boolean equipment;
     private String description;
 
+    public Exercise(String name, String musclesUsed, boolean stationary, boolean equipment, String description)
+    {
+        this.name = name;
+        this.musclesUsed = musclesUsed;
+        this.stationary = stationary;
+        this.equipment = equipment;
+        this.description = description;
+    }
     
     // Name getter and setter
     public String getName()
