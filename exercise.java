@@ -1,4 +1,4 @@
-public class Exercise extends Object
+public class Exercise extends Object //Exercise
 {
     private String name;
     private String musclesUsed;
