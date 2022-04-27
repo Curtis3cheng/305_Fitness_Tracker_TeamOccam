@@ -10,7 +10,7 @@ import java.io.*;
     Last Updated: April 26, 2022
 */
 
-public class fitness_demo 
+public class FitnessDemo 
 {
     public static void main(String[] args) 
     {

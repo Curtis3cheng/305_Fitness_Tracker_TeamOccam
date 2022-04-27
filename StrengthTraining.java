@@ -1,4 +1,4 @@
-public class strength_training extends exercise
+public class StrengthTraining extends Exercise
 {
     private int reps;
     private int sets;

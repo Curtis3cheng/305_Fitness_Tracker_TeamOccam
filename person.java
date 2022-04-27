@@ -1,6 +1,6 @@
 
 
-public class person extends Object
+public class Person extends Object
 {
     private String name;
     private float height;
