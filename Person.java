@@ -81,7 +81,11 @@ public class Person extends Object //Person
      @Override
      public String toString()
      {
-        return "Code this later";
+        return ( "Name:" + this.name + "\n" 
+        + "Height: " + this.height + "\n"
+        + "Weight: " + this.weight + "\n"
+        + "Gender: " + this.gender + "\n" 
+        + "Age: " + this.age) ;
      }
 
 }
