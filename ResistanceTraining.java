@@ -1,4 +1,4 @@
-public class ResistanceTraining extends strengthTraining
+public class ResistanceTraining extends StrengthTraining
 {
     private int bandStrength;
 
