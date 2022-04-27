@@ -23,7 +23,19 @@ public class FitnessDemo
         }
         else 
         {
-            //creat a new user
+            System.out.print("Please enter your name: ");
+            String name = userInput.nextLine();
+            System.out.print("\nPlease enter your height: ");
+            float height = userInput.nextFloat();
+            System.out.print("\nPlease enter your weight: ");
+            float weight = userInput.nextFloat();
+            System.out.print("\nPlease enter your gender: ");
+            String gender = userInput.nextLine();
+            System.out.print("\nPlease enter your age: ");
+            int age = userInput.nextInt();
+
+            Person newMember = new Person(name, height, weight, gender, age);
+            System.out.println(newMember);
         }
 
     }
