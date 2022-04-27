@@ -17,7 +17,8 @@ public class ResistanceTraining extends StrengthTraining
     @Override
     public String toString()
     {
-       return "Code this later";
+       return (super.toString() + "\n"
+       + "The bandstength was: " + this.bandStrength);
     }
 
 

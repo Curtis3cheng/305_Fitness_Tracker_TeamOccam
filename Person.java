@@ -61,31 +61,45 @@ public class Person extends Object //Person
 
      // Age getter and setter
 
-     public float getAge()
-     {
+    public float getAge()
+    {
         return this.age;
-     }
+    }
 
-     public void setAge(float age)
-     {
-         this.age = age;
-     }
+    public void setAge(float age)
+    {
+        this.age = age;
+    }
 
 
-     public void showWorkouts()
-     {
+    public void showWorkouts()
+    {
         System.out.println("Code this later");
-     }
+    }
+
+
+    // This will write the personal information into a file so that a person can load their information
+    public void writePersonalInfoToFile()
+    {
+        System.out.println("Code this later");
+    }
+
+
+    // This will write the persons workoutsinto a file so that a person can load their workouts
+    public void writeWorkoutslToFile()
+    {
+        System.out.println("Code this later");
+    }
 
      
-     @Override
-     public String toString()
-     {
+    @Override
+    public String toString()
+    {
         return ( "Name:" + this.name + "\n" 
         + "Height: " + this.height + "\n"
         + "Weight: " + this.weight + "\n"
         + "Gender: " + this.gender + "\n" 
         + "Age: " + this.age) ;
-     }
+    }
 
 }

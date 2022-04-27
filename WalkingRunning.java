@@ -66,8 +66,14 @@ public class WalkingRunning extends Exercise
     @Override
     public String toString()
     {
-       return "Code this later";
+       return (super.toString() + "\n" 
+       + "The duration was: " + this.duration + "\n"
+       + "The pace was: " + this.pace + "\n"
+       + "The cadence was: " + this.cadence + "\n"
+       + "The distance was: " + this.distance + "\n"
+       + "The incline was: " + this.incline);
     }
+
 
     public void addWorkout()
     {

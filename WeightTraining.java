@@ -17,7 +17,8 @@ public class WeightTraining extends StrengthTraining
     @Override
     public String toString()
     {
-       return "Code this later";
+       return (super.toString() + "\n"
+       + "The amount of weight was: " + this.weight + " Pounds");
     }
 
     public void addWorkout()

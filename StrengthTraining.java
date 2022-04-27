@@ -26,4 +26,20 @@ public class StrengthTraining extends Exercise
     {
         this.sets = sets;
     }
+
+    @Override
+    public String toString()
+    {
+       return (super.toString() + "\n"
+       + "The number of reps was: " + this.reps + "\n"
+       + "The number of sets was: " + this.sets);
+    }
+
+
+    public void addWorkout()
+    {
+        System.out.println("Code this later");
+    }
+
 }
+

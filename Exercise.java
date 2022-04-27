@@ -30,6 +30,14 @@ public class Exercise extends Object //Exercise
         this.musclesUsed = muscleUsed;
     }
 
-}
+    @Override
+    public String toString()
+    {
+       return ("Name of Exercise: " + this.name + "\n"
+       + "Muscles used: " + this.musclesUsed  + "\n" 
+       + "Is the exercise stationary" + this.stationary  + "\n"
+       + "Is equipment required" + this.equipment  + "\n"
+       + "Description of workout: " + this.description);
+    }
 
-//added comment
+}
