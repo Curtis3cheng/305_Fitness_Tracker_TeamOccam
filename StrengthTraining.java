@@ -43,10 +43,7 @@ public class StrengthTraining extends Exercise
     }
 
 
-    public void addWorkout()
-    {
-        System.out.println("Code this later");
-    }
+
 
 }
 

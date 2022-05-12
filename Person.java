@@ -1,5 +1,4 @@
-
-
+import java.util.*;
 public class Person extends Object //Person
 {
     private String name;
@@ -7,7 +6,7 @@ public class Person extends Object //Person
     private float weight;
     private String gender;
     private float age;
-    private Object[] workoutHistory;
+    protected List<Object>workoutHistory = new ArrayList<Object>();
 
 
     public Person(String name, float height, float weight, String gender, float age)
@@ -97,6 +96,11 @@ public class Person extends Object //Person
     public void writeWorkoutsToFile()
     {
         System.out.println("Code this later");
+    }
+
+    public void addWorkout(Object Workout)
+    {
+        workoutHistory.add(Workout);
     }
 
      

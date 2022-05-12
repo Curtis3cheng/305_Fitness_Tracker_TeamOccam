@@ -29,10 +29,6 @@ public class ResistanceTraining extends StrengthTraining
     }
 
 
-    public void addWorkout()
-    {
-        System.out.println("Code this later");
-    }
 
 
 }

@@ -1,5 +1,7 @@
 import java.util.*;
 import java.io.*;
+import org.json.simple.JSONObject;
+
 
 
 /*
@@ -17,7 +19,10 @@ public class FitnessDemo
     static Scanner userInput = new Scanner(System.in);
     public static void main(String[] args) 
     {
+        Person member;
+
         
+
         System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account \n");
         String loginChoice = userInput.next();
         userInput.nextLine();
@@ -43,9 +48,11 @@ public class FitnessDemo
             // System.out.print("\nPlease enter your age: ");
             // int age = userInput.nextInt();
     
-            Person newMember = createPerson();
-            System.out.println(newMember);
+            member = createPerson();
+            
+            System.out.println(member);
         }
+
 
         while(true)
         {
@@ -71,14 +78,19 @@ public class FitnessDemo
                         case 1: 
                             //create Resistance workout 
                             ResistanceTraining rt = createResistance();
+                            member.addWorkout(rt);
+
+                            
                             break;
                         case 2: 
                             // create walking or running workout 
                             WalkingRunning wr = createWalk();
+                            member.addWorkout(wr);
                             break;
                         case 3: 
                             // create weight training 
                             WeightTraining w = createWeight();
+                            member.addWorkout(w);
                             break;
                         default: 
                             System.out.println("Input is invalid");
@@ -108,6 +120,13 @@ public class FitnessDemo
         String age = userInput.nextLine(); //int
 
         Person newMember = new Person(name, Float.parseFloat(height), Float.parseFloat(weight), gender, Integer.parseInt(age));
+        
+
+        //add JSON object
+        JSONObject personObj = new JSONObject();
+        personObj.put(name, newMember);
+        System.out.println(personObj);
+
         return (newMember);
     }
 
@@ -143,6 +162,9 @@ public class FitnessDemo
         }
 
         WeightTraining newEx = new WeightTraining(name, musclesUsed, isStationary, isEquipment, description, reps, sets, weight);
+        
+
+
         return newEx;
     }
 

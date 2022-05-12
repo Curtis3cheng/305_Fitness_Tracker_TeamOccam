@@ -27,9 +27,5 @@ public class WeightTraining extends StrengthTraining
        + "The amount of weight was: " + this.weight + " Pounds");
     }
 
-    public void addWorkout()
-    {
-        System.out.println("Code this later");
-    }
 
 }
