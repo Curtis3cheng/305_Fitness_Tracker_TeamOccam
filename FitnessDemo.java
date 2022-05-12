@@ -1,13 +1,15 @@
 import java.util.*;
 import java.io.*;
 
+
 /*
     Implementation of the Fitness Tracker Driver Class project for COMP 305.
     Professor Ahn Nuzen
     Author: Bo Kulbacki (rkulbacki@sandiego.edu)
+            Curtis Cheng(curtischeng@sandiego.edu)
 
 
-    Last Updated: April 26, 2022
+    Last Updated: 12 May 2022
 */
 
 public class FitnessDemo 
