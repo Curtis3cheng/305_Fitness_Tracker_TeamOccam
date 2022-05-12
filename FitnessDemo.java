@@ -12,7 +12,7 @@ import org.json.simple.JSONObject;
             Griffin Palmeri(gpalmeri@sandiego.edu)
 
 
-    Last Updated: 12 May 2022 Version 2
+    Last Updated: 12 May 2022 Version 3
 */
 
 public class FitnessDemo 
@@ -52,14 +52,16 @@ public class FitnessDemo
             System.out.println(member);
         }
 
-
-        while(true)
+        boolean x = true;
+        while(x == true)
         {
             System.out.println("Please select an option from the menu below:");
 
             System.out.println("1.  View User Information");
             System.out.println("2.  Add an Exercise");
             System.out.println("3.  View Previous Workouts");
+            System.out.println("4.  Close program");
+
 
             int menuChoice = Integer.parseInt(userInput.nextLine());
             switch(menuChoice)
@@ -78,8 +80,6 @@ public class FitnessDemo
                             //create Resistance workout 
                             ResistanceTraining rt = createResistance();
                             member.addWorkout(rt);
-
-                            
                             break;
                         case 2: 
                             // create walking or running workout 
@@ -98,10 +98,26 @@ public class FitnessDemo
                 case 3: 
                     System.out.println("PRINT PREVIOUS WORKOUT HISTORY");
                     break;
+                case 4:
+                    System.out.println("Exiting");
+                    x = false;
+
                 default: 
                     System.out.println("Input is invalid");
             }
         }
+        JSONObject workoutObj = new JSONObject();
+        workoutObj.put(member.name, member.workoutHistory);
+        try{
+            FileWriter myWriter = new FileWriter(member.name +"Workouts.txt");
+            myWriter.write(workoutObj.toJSONString());
+            myWriter.close();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        
+
+
 
     }
 
@@ -124,7 +140,16 @@ public class FitnessDemo
         //add JSON object
         JSONObject personObj = new JSONObject();
         personObj.put(name, newMember);
-        System.out.println(personObj);
+        try{
+        FileWriter myWriter = new FileWriter(name +"Info.txt");
+        myWriter.write(personObj.toJSONString());
+        myWriter.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+
+
 
         return (newMember);
     }
