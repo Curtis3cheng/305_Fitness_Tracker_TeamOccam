@@ -3,6 +3,13 @@ public class StrengthTraining extends Exercise
     private int reps;
     private int sets;
 
+    public StrengthTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets)
+    {
+        super(name,musclesUsed,stationary,equipment,description);
+        this.reps = reps;
+        this.sets = sets;
+    }
+
     // Reps getter and setter
     public int getReps()
     {

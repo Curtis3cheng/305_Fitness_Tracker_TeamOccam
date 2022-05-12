@@ -3,6 +3,12 @@ public class WeightTraining extends StrengthTraining
 {
     private float weight;
 
+
+    public WeightTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, int weight)
+    {
+        super(name,musclesUsed,stationary,equipment,description,reps,sets);
+        this.weight = weight;
+    }
     // Weight getter and setter
     public float getWeight()
     {

@@ -6,6 +6,17 @@ public class WalkingRunning extends Exercise
     private float distance;
     private float incline;
 
+    public WalkingRunning(String name, String musclesUsed, boolean stationary, boolean equipment, String description,
+     float duration, float pace, int cadence, float distance, float incline)
+    {
+        super(name,musclesUsed,stationary,equipment,description);
+        this.duration = duration;
+        this.pace= pace;
+        this.cadence = cadence;
+        this.distance = distance;
+        this.incline = incline;
+    }
+
     // Duration getter and setter
     public float getDuration()
     {
