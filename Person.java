@@ -1,13 +1,21 @@
 import java.util.*;
 public class Person extends Object //Person
 {
-    private String name;
-    private float height;
-    private float weight;
-    private String gender;
-    private float age;
+    protected String name;
+    protected float height;
+    protected float weight;
+    protected String gender;
+    protected float age;
     protected List<Object>workoutHistory = new ArrayList<Object>();
 
+    public Person()
+    {
+        this.name = "NA";
+        this.height = 0;
+        this.weight = 0;
+        this.gender = "NA";
+        this.age = 0;
+    }
 
     public Person(String name, float height, float weight, String gender, float age)
     {

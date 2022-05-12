@@ -9,9 +9,10 @@ import org.json.simple.JSONObject;
     Professor Ahn Nuzen
     Author: Bo Kulbacki (rkulbacki@sandiego.edu)
             Curtis Cheng(curtischeng@sandiego.edu)
+            Griffin Palmeri(gpalmeri@sandiego.edu)
 
 
-    Last Updated: 12 May 2022 Version 1
+    Last Updated: 12 May 2022 Version 2
 */
 
 public class FitnessDemo 
@@ -19,10 +20,8 @@ public class FitnessDemo
     static Scanner userInput = new Scanner(System.in);
     public static void main(String[] args) 
     {
-        Person member;
-
+        Person member = new Person();
         
-
         System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account \n");
         String loginChoice = userInput.next();
         userInput.nextLine();

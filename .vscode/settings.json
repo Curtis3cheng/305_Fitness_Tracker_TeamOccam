@@ -1,6 +1,8 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\Curti\\Downloads\\json-simple-1.1.1.jar"
+        "c:\\Users\\Curti\\Downloads\\json-simple-1.1.1.jar",
+        "/Users/Griffin/Computer classes/Comp305/Occam_Project/305_Fitness_Tracker_TeamOccam/**/*.jar",
+        "/Users/Griffin/Downloads/json-simple-1.1.1.jar"
     ]
 }
