@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
             Curtis Cheng(curtischeng@sandiego.edu)
 
 
-    Last Updated: 12 May 2022
+    Last Updated: 12 May 2022 Version 1
 */
 
 public class FitnessDemo 
