@@ -31,22 +31,7 @@ public class FitnessDemo
         }
         else 
         {
-            
-            // System.out.print("Please enter your name: ");
-            // String name = userInput.nextLine();
-            
-            // System.out.print("\nPlease enter your height: ");
-            // float height = userInput.nextFloat();
-            // userInput.nextLine();
-            // System.out.print("\nPlease enter your weight: ");
-            // float weight = userInput.nextFloat();
-            // userInput.nextLine();
-            // System.out.print("\nPlease enter your gender: ");
-            // String gender = userInput.nextLine();
-            
-            // System.out.print("\nPlease enter your age: ");
-            // int age = userInput.nextInt();
-    
+               
             member = createPerson();
             
             System.out.println(member);
@@ -67,7 +52,7 @@ public class FitnessDemo
             switch(menuChoice)
             {
                 case 1: 
-                    System.out.println("PRINT CURRENT USER");
+                    System.out.println(member);
                     break;
                 case 2: 
                 System.out.println("What type of workout is this?");
@@ -96,7 +81,7 @@ public class FitnessDemo
                     }
                     break;
                 case 3: 
-                    System.out.println("PRINT PREVIOUS WORKOUT HISTORY");
+                    System.out.println(member.workoutHistory);
                     break;
                 case 4:
                     System.out.println("Exiting");
