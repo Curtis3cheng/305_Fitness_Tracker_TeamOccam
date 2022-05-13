@@ -27,7 +27,7 @@ public class FitnessDemo
         userInput.nextLine();
         if (loginChoice.equals("1"))
         {
-            //new function loadData()
+            loadData();
         }
         else 
         {
@@ -252,6 +252,32 @@ public class FitnessDemo
 
         ResistanceTraining newEx = new ResistanceTraining(name, musclesUsed, isStationary, isEquipment, description, reps, sets, bandStrength);
         return newEx;
+    }
+    public static void loadData(){
+        System.out.println("What is your first name");
+        String name = userInput.nextLine();
+        try{
+        FileReader fr = new FileReader(name+"Info.txt");
+        Scanner myReader = new Scanner(fr);
+        Object[] personParameters = new Object[5];
+        int counter = 0;
+        while(myReader.hasNextLine())
+        {
+            String data = myReader.nextLine();
+            String [] arrOfStr = data.split(" ", 1);
+            arrOfStr[1] = arrOfStr[1].replaceAll("}","" );
+            personParameters[counter] = arrOfStr[1];
+            counter++;
+        }
+
+        Person newMember = new Person(personParameters[0],personParameters[1], personParameters[2], personParameters[3], personParameters[4]);
+
+        
+
+
+        }catch(IOException e){
+            System.out.println("File Not found");
+        }
     }
 }
 
