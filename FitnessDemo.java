@@ -12,7 +12,7 @@ import org.json.simple.JSONObject;
             Griffin Palmeri(gpalmeri@sandiego.edu)
 
 
-    Last Updated: 12 May 2022 Version 3
+    Last Updated: 12 May 2022 Version 4
 */
 
 public class FitnessDemo 
@@ -86,6 +86,7 @@ public class FitnessDemo
                 case 4:
                     System.out.println("Exiting");
                     x = false;
+                    break;
 
                 default: 
                     System.out.println("Input is invalid");
@@ -258,19 +259,22 @@ public class FitnessDemo
         String name = userInput.nextLine();
         try{
         FileReader fr = new FileReader(name+"Info.txt");
+        System.out.println("File was opened");
         Scanner myReader = new Scanner(fr);
-        Object[] personParameters = new Object[5];
+        String[] personParameters = new String[5];
         int counter = 0;
         while(myReader.hasNextLine())
         {
             String data = myReader.nextLine();
-            String [] arrOfStr = data.split(" ", 1);
+            String [] arrOfStr = data.split(" ", 2);
             arrOfStr[1] = arrOfStr[1].replaceAll("}","" );
             personParameters[counter] = arrOfStr[1];
             counter++;
         }
+  
 
-        Person newMember = new Person(personParameters[0],personParameters[1], personParameters[2], personParameters[3], personParameters[4]);
+        Person newMember = new Person((String) personParameters[0],Float.valueOf(personParameters[1]), Float.valueOf(personParameters[2]), (String)personParameters[3],Float.valueOf(personParameters[4]));
+        System.out.println(newMember);
 
         
 
