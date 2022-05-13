@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 import org.json.simple.JSONObject;
-
+import java.util.InputMismatchException;
 
 
 /*
@@ -109,35 +109,38 @@ public class FitnessDemo
 
     public static Person createPerson()
     {
-        System.out.print("Please enter your name: ");
-        String name = userInput.nextLine();
-        System.out.print("\nPlease enter your height: ");
-        String height = userInput.nextLine(); //float
-        System.out.print("\nPlease enter your weight: ");
-        String weight = userInput.nextLine(); //float
-        System.out.print("\nPlease enter your gender: ");
-        String gender = userInput.nextLine();
-        System.out.print("\nPlease enter your age: ");
-        String age = userInput.nextLine(); //int
+        try{
+            System.out.print("Please enter your name: ");
+            String name = userInput.nextLine();
+            System.out.print("\nPlease enter your height: ");
+            String height = userInput.nextLine(); //float
+            System.out.print("\nPlease enter your weight: ");
+            String weight = userInput.nextLine(); //float
+            System.out.print("\nPlease enter your gender: ");
+            String gender = userInput.nextLine();
+            System.out.print("\nPlease enter your age: ");
+            String age = userInput.nextLine(); //int
 
-        Person newMember = new Person(name, Float.parseFloat(height), Float.parseFloat(weight), gender, Integer.parseInt(age));
+            Person newMember = new Person(name, Float.parseFloat(height), Float.parseFloat(weight), gender, Integer.parseInt(age));
         
 
-        //add JSON object
-        JSONObject personObj = new JSONObject();
-        personObj.put(name, newMember);
-        try{
-        FileWriter myWriter = new FileWriter(name +"Info.txt");
-        myWriter.write(personObj.toJSONString());
-        myWriter.close();
-        } catch (IOException e){
+            //add JSON object
+            JSONObject personObj = new JSONObject();
+            personObj.put(name, newMember);
+            try{
+            FileWriter myWriter = new FileWriter(name +"Info.txt");
+            myWriter.write(personObj.toJSONString());
+            myWriter.close();
+            } catch (IOException e){
             e.printStackTrace();
+            }
+
+
+
+            return (newMember);
+        }catch(InputMismatchException ex){
+            System.out.println("The given input is unacceptable. Please insert a valid input" +ex);
         }
-
-
-
-
-        return (newMember);
     }
 
     public static WeightTraining createWeight()
