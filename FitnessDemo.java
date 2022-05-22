@@ -141,6 +141,7 @@ public class FitnessDemo
         }catch(InputMismatchException ex){
             System.out.println("The given input is unacceptable. Please insert a valid input" +ex);
         }
+        return null;
     }
 
     public static WeightTraining createWeight()
