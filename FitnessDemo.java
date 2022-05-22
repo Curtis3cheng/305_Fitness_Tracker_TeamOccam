@@ -1,8 +1,6 @@
 import java.util.*;
 import java.io.*;
 import org.json.simple.JSONObject;
-import java.util.InputMismatchException;
-
 
 /*
     Implementation of the Fitness Tracker Driver Class project for COMP 305.
