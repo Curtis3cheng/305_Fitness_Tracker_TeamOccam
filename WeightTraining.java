@@ -2,7 +2,7 @@
 public class WeightTraining extends StrengthTraining
 {
     private float weight;
-    private final int exerciseType = 3;
+    private final String exerciseType = "WeightTraining";
 
 
     public WeightTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, float weight)

@@ -1,0 +1,11 @@
+{"Curtis":[
+WeightTraining
+Name of Exercise: weight
+Muscles used: asdf,asdf
+Is the exercise stationary: true
+Is equipment required: true
+Description of workout: sad;lfkj
+The number of reps was: 3
+The number of sets was: 1
+The amount of pounds was: 123.0
+]}

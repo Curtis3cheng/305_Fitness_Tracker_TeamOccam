@@ -5,7 +5,7 @@ public class WalkingRunning extends Exercise
     private int cadence;
     private float distance;
     private float incline;
-    private final int exerciseType = 2;
+    private final String exerciseType = "WalkingRunning";
 
 
     public WalkingRunning(String name, String musclesUsed, boolean stationary, boolean equipment, String description,

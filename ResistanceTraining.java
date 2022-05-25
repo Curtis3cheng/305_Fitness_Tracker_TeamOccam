@@ -1,7 +1,7 @@
 public class ResistanceTraining extends StrengthTraining
 {
     private int bandStrength;
-    private final int exerciseType = 1;
+    private final String exerciseType = "ResistanceTraining";
 
 
     public ResistanceTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, int bandStrength)

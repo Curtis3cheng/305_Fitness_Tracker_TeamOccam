@@ -298,7 +298,7 @@ public class FitnessDemo
             data2 = myReader2.nextLine();
             String [] arrOfStr2 = data2.split(": ", 2);
             
-            if(arrOfStr2[0].equals("1") )
+            if(arrOfStr2[0].equals("ResistanceTraining") )
             {
                 for (int i = 0; i < 8; i++)
                 {
@@ -312,7 +312,7 @@ public class FitnessDemo
                 
                 newMember.addWorkout(newWorkout);                
             }
-            else if(arrOfStr2[0].equals("2"))
+            else if(arrOfStr2[0].equals("WalkingRunning"))
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -327,7 +327,7 @@ public class FitnessDemo
                 newMember.addWorkout(newWorkout2);
                
             }
-            else if(arrOfStr2[0].equals("3"))
+            else if(arrOfStr2[0].equals("WeightTraining"))
             {
                 for (int i = 0; i < 8; i++)
                 {
@@ -345,6 +345,7 @@ public class FitnessDemo
 
        
         }
+        myReader2.close();
 
         return newMember;
         }catch(IOException e){
