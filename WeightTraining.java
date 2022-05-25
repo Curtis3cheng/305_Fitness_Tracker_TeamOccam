@@ -5,7 +5,7 @@ public class WeightTraining extends StrengthTraining
     private final int exerciseType = 3;
 
 
-    public WeightTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, int weight)
+    public WeightTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, float weight)
     {
         super(name,musclesUsed,stationary,equipment,description,reps,sets);
         this.weight = weight;
@@ -25,7 +25,7 @@ public class WeightTraining extends StrengthTraining
     public String toString()
     {
        return ("\n" + this.exerciseType + "\n" + super.toString()
-       + "The amount of weight was: " + this.weight + " Pounds" + "\n");
+       + "The amount of pounds was: " + this.weight + "\n");
     }
 
 

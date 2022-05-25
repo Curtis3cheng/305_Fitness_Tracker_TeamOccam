@@ -2,9 +2,7 @@ public class StrengthTraining extends Exercise
 {
     private int reps;
     private int sets;
-    private final int exerciseType = 3;
-
-
+  
     public StrengthTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets)
     {
         super(name,musclesUsed,stationary,equipment,description);
@@ -39,7 +37,7 @@ public class StrengthTraining extends Exercise
     @Override
     public String toString()
     {
-       return ("\n" + this.exerciseType + "\n" + super.toString()
+       return (super.toString()
        + "The number of reps was: " + this.reps + "\n"
        + "The number of sets was: " + this.sets + "\n");
     }

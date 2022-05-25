@@ -25,7 +25,7 @@ public class FitnessDemo
         userInput.nextLine();
         if (loginChoice.equals("1"))
         {
-            loadData();
+            member = loadData();
         }
         else 
         {
@@ -256,9 +256,11 @@ public class FitnessDemo
         ResistanceTraining newEx = new ResistanceTraining(name, musclesUsed, isStationary, isEquipment, description, reps, sets, bandStrength);
         return newEx;
     }
-    public static void loadData(){
+    public static Person loadData(){
+        
         System.out.println("What is your first name");
         String name = userInput.nextLine();
+
         try{
         FileReader fr = new FileReader(name+"Info.txt");
         System.out.println("File was opened");
@@ -277,14 +279,79 @@ public class FitnessDemo
         myReader.close();
     
         Person newMember = new Person((String) personParameters[0],Float.valueOf(personParameters[1]), Float.valueOf(personParameters[2]), (String)personParameters[3],Float.valueOf(personParameters[4]));
+        System.out.println("Welcome back");
         System.out.println(newMember);
 
 
-    
+        FileReader fr2 = new FileReader(name+"Workouts.txt");
+        System.out.println("File was opened");
 
+        Scanner myReader2 = new Scanner(fr2);
+        String[] WorkoutType1 = new String[8];
+        String[] WorkoutType2 = new String[10];
+        String[] WorkoutType3 = new String[8];
+
+        String data2 = myReader2.nextLine();
+
+        while(myReader2.hasNextLine())
+        {
+            data2 = myReader2.nextLine();
+            String [] arrOfStr2 = data2.split(": ", 2);
+            
+            if(arrOfStr2[0].equals("1") )
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    data2 = myReader2.nextLine();
+                    arrOfStr2 = data2.split(": ", 2);
+                    WorkoutType1[i] = arrOfStr2[1];
+                    
+                }
+                ResistanceTraining newWorkout = new ResistanceTraining(WorkoutType1[0], WorkoutType1[1], Boolean.parseBoolean(WorkoutType1[2]),
+                    Boolean.parseBoolean(WorkoutType1[3]), WorkoutType1[4], Integer.parseInt(WorkoutType1[5]), Integer.parseInt(WorkoutType1[6]), Integer.parseInt(WorkoutType1[7]));
+                
+                newMember.addWorkout(newWorkout);                
+            }
+            else if(arrOfStr2[0].equals("2"))
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    data2 = myReader2.nextLine();
+                    arrOfStr2 = data2.split(": ", 2);
+                    WorkoutType2[i] = arrOfStr2[1];
+
+                }
+                WalkingRunning newWorkout2 = new WalkingRunning(WorkoutType2[0], WorkoutType2[1], Boolean.parseBoolean(WorkoutType2[2]),
+                    Boolean.parseBoolean(WorkoutType2[3]), WorkoutType2[4], Float.valueOf(WorkoutType2[5]), Float.valueOf(WorkoutType2[6]), Integer.parseInt(WorkoutType2[7]), Float.valueOf(WorkoutType2[8]), Float.valueOf(WorkoutType2[9]));
+                
+                newMember.addWorkout(newWorkout2);
+               
+            }
+            else if(arrOfStr2[0].equals("3"))
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    data2 = myReader2.nextLine();
+                    arrOfStr2 = data2.split(": ", 2);
+                    WorkoutType3[i] = arrOfStr2[1];
+
+                }
+                WeightTraining newWorkout3 = new WeightTraining(WorkoutType3[0], WorkoutType3[1], Boolean.parseBoolean(WorkoutType3[2]),
+                Boolean.parseBoolean(WorkoutType3[3]), WorkoutType3[4], Integer.parseInt(WorkoutType3[5]), Integer.parseInt(WorkoutType3[6]), Float.valueOf(WorkoutType3[7]));
+                
+                newMember.addWorkout(newWorkout3);
+                
+            }
+
+       
+        }
+
+        return newMember;
         }catch(IOException e){
             System.out.println("File Not found");
         }
+        return null;
+
     }
 }
 
