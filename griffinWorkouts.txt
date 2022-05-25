@@ -1,0 +1,25 @@
+{"griffin":[
+3
+
+3
+Name of Exercise: iwoejoiwefoiw
+Muscles used: weopfowp
+Is the exercise stationary true
+Is equipment required false
+Description of workout: jfkwjewkfjekw
+The number of reps was: 1
+The number of sets was: 1
+The amount of weight was: 213.0 Pounds
+,
+1
+
+3
+Name of Exercise: weiojfoiwejfwo
+Muscles used: iowefjowiif
+Is the exercise stationary false
+Is equipment required false
+Description of workout: ewfjoweif
+The number of reps was: 1
+The number of sets was: 1
+The bandstength was: 1
+]}

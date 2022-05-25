@@ -6,7 +6,6 @@ abstract class Exercise extends Object //Exercise
     private boolean equipment;
     private String description;
 
-    
     public Exercise(String name, String musclesUsed, boolean stationary, boolean equipment, String description)
     {
         this.name = name;
@@ -46,7 +45,7 @@ abstract class Exercise extends Object //Exercise
        + "Muscles used: " + this.musclesUsed  + "\n" 
        + "Is the exercise stationary " + this.stationary  + "\n"
        + "Is equipment required " + this.equipment  + "\n"
-       + "Description of workout: " + this.description);
+       + "Description of workout: " + this.description + "\n");
      }
 
 }

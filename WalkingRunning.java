@@ -5,6 +5,8 @@ public class WalkingRunning extends Exercise
     private int cadence;
     private float distance;
     private float incline;
+    private final int exerciseType = 2;
+
 
     public WalkingRunning(String name, String musclesUsed, boolean stationary, boolean equipment, String description,
      float duration, float pace, int cadence, float distance, float incline)
@@ -77,12 +79,12 @@ public class WalkingRunning extends Exercise
     @Override
     public String toString()
     {
-       return (super.toString() + "\n" 
+       return ("\n" + this.exerciseType + "\n" + super.toString() 
        + "The duration was: " + this.duration + "\n"
        + "The pace was: " + this.pace + "\n"
        + "The cadence was: " + this.cadence + "\n"
        + "The distance was: " + this.distance + "\n"
-       + "The incline was: " + this.incline);
+       + "The incline was: " + this.incline + "\n");
     }
 
 

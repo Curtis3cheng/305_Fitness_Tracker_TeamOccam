@@ -273,13 +273,14 @@ public class FitnessDemo
             personParameters[counter] = arrOfStr[1];
             counter++;
         }
-  
 
+        myReader.close();
+    
         Person newMember = new Person((String) personParameters[0],Float.valueOf(personParameters[1]), Float.valueOf(personParameters[2]), (String)personParameters[3],Float.valueOf(personParameters[4]));
         System.out.println(newMember);
 
-        
 
+    
 
         }catch(IOException e){
             System.out.println("File Not found");

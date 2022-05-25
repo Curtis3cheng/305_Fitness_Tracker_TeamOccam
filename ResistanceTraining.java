@@ -1,6 +1,8 @@
 public class ResistanceTraining extends StrengthTraining
 {
     private int bandStrength;
+    private final int exerciseType = 1;
+
 
     public ResistanceTraining(String name, String musclesUsed, boolean stationary, boolean equipment, String description, int reps, int sets, int bandStrength)
     {
@@ -24,8 +26,8 @@ public class ResistanceTraining extends StrengthTraining
     @Override
     public String toString()
     {
-       return (super.toString() + "\n"
-       + "The bandstength was: " + this.bandStrength);
+       return ("\n" + this.exerciseType + "\n" + super.toString()
+       + "The bandstength was: " + this.bandStrength + "\n");
     }
 
 

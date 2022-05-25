@@ -87,25 +87,6 @@ public class Person extends Object //Person
     }
 
 
-    public void showWorkouts()
-    {
-        System.out.println("Code this later");
-    }
-
-
-    // This will write the personal information into a file so that a person can load their information
-    public void writePersonalInfoToFile()
-    {
-        System.out.println("Code this later");
-    }
-
-
-    // This will write the persons workoutsinto a file so that a person can load their workouts
-    public void writeWorkoutsToFile()
-    {
-        System.out.println("Code this later");
-    }
-
     public void addWorkout(Object Workout)
     {
         workoutHistory.add(Workout);
