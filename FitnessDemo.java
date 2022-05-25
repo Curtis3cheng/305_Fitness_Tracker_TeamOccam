@@ -4,22 +4,31 @@ import org.json.simple.JSONObject;
 
 /*
     Implementation of the Fitness Tracker Driver Class project for COMP 305.
+    This is the driver class that incorporates all of our different objects that make up the Fitness Tracker
     Professor Ahn Nuzen
+
+    Proj: Final Programming Project
+    Class: COMP-305
+    Filename: FitnessDemo.java
     Author: Bo Kulbacki (rkulbacki@sandiego.edu)
             Curtis Cheng(curtischeng@sandiego.edu)
             Griffin Palmeri(gpalmeri@sandiego.edu)
 
 
-    Last Updated: 12 May 2022 Version 4
+    Last Updated: 25 May 2022 Version 4
+
 */
+
 
 public class FitnessDemo 
 {
     static Scanner userInput = new Scanner(System.in);
     public static void main(String[] args) 
+    //main method, this runs our entire program
     {
         Person member = new Person();
         
+        //user is presented with a menu of choices, and their input is taken and then handled 
         System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account \n");
         String loginChoice = userInput.next();
         userInput.nextLine();
@@ -38,6 +47,7 @@ public class FitnessDemo
         boolean x = true;
         while(x == true)
         {
+            //user is presented with more options specific to their account 
             System.out.println("Please select an option from the menu below:");
 
             System.out.println("1.  View User Information");
@@ -79,9 +89,11 @@ public class FitnessDemo
                     }
                     break;
                 case 3: 
+                    //display user workout history 
                     System.out.println(member.workoutHistory);
                     break;
                 case 4:
+                    //exit the program
                     System.out.println("Exiting");
                     x = false;
                     break;
@@ -90,8 +102,10 @@ public class FitnessDemo
                     System.out.println("Input is invalid");
             }
         }
+        //creating a JSON object to save the member and workout history
         JSONObject workoutObj = new JSONObject();
         workoutObj.put(member.name, member.workoutHistory);
+        //writing files with the JSON  objects
         try{
             FileWriter myWriter = new FileWriter(member.name +"Workouts.txt");
             myWriter.write(workoutObj.toJSONString());
@@ -99,13 +113,10 @@ public class FitnessDemo
             } catch (IOException e){
                 e.printStackTrace();
             }
-        
-
-
-
     }
 
     public static Person createPerson()
+    //createPerson is a method that allows the user to create their own "account"
     {
         try{
             System.out.print("Please enter your name: ");
@@ -143,6 +154,7 @@ public class FitnessDemo
     }
 
     public static WeightTraining createWeight()
+    //createweight is a method that allows the user to create their own weight training exercise
     {
         System.out.print("Please enter the name of the exercise: ");
         String name = userInput.nextLine();
@@ -182,6 +194,7 @@ public class FitnessDemo
 
 
     public static WalkingRunning createWalk()
+    //createWalk is a method that allows the user to create their own walking or running (cardio) exercise
     {
         System.out.print("Please enter the name of the exercise: ");
         String name = userInput.nextLine();
@@ -223,6 +236,7 @@ public class FitnessDemo
     }
 
     public static ResistanceTraining createResistance()
+    //createResistance is a method that allows the user to create their own resistance training exercise
     {
         System.out.print("Please enter the name of the exercise: ");
         String name = userInput.nextLine();
@@ -256,7 +270,10 @@ public class FitnessDemo
         ResistanceTraining newEx = new ResistanceTraining(name, musclesUsed, isStationary, isEquipment, description, reps, sets, bandStrength);
         return newEx;
     }
-    public static Person loadData(){
+    public static Person loadData()
+    //loadData is the method that allows the user to load in data from their account
+    //This information is loaded in from a text file.
+    {
         
         System.out.println("What is your first name");
         String name = userInput.nextLine();
@@ -294,6 +311,8 @@ public class FitnessDemo
         String data2 = myReader2.nextLine();
 
         while(myReader2.hasNextLine())
+        //this section is reading in the data from the user's workout history
+        //The data is read in, split up, and then used to re-create those same workout objects
         {
             data2 = myReader2.nextLine();
             String [] arrOfStr2 = data2.split(": ", 2);

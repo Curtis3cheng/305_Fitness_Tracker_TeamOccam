@@ -1,3 +1,21 @@
+/*
+    Implementation of the WalkingRuning Class for COMP 305 Final Project. 
+    This is the WalkingRuning class that allows us to create WalkingRuning objects. 
+    This class inherits from Exercise.
+    Professor: Ahn Nuzen
+
+    Proj: Final Programming Project
+    Class: COMP-305
+    Filename: WalkingRuning.java
+    Author: Bo Kulbacki (rkulbacki@sandiego.edu)
+            Curtis Cheng(curtischeng@sandiego.edu)
+            Griffin Palmeri(gpalmeri@sandiego.edu)
+
+
+    Last Updated: 25 May 2022 Version 4
+
+*/
+
 public class WalkingRunning extends Exercise
 {
     private float duration;

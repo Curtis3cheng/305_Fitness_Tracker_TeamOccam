@@ -1,3 +1,19 @@
+/*
+    Implementation of the Excercise Class for COMP 305 Final Project..
+    This is the exercise class that allows us to create Exercises. This is the parent class. 
+    Professor: Ahn Nuzen
+
+    Proj: Final Programming Project
+    Class: COMP-305
+    Filename: Excercise.java
+    Author: Bo Kulbacki (rkulbacki@sandiego.edu)
+            Curtis Cheng(curtischeng@sandiego.edu)
+            Griffin Palmeri(gpalmeri@sandiego.edu)
+
+
+    Last Updated: 25 May 2022 Version 4
+
+*/
 abstract class Exercise extends Object //Exercise
 {
     private String name;

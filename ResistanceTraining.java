@@ -1,3 +1,21 @@
+/*
+    Implementation of the ResistanceTraining Class for COMP 305 Final Project. 
+    This is the ResistanceTraining class that allows us to create ResistanceTraining objects. 
+    This class inherits from StrengthTraining.
+    Professor: Ahn Nuzen
+
+    Proj: Final Programming Project
+    Class: COMP-305
+    Filename: ResistanceTraining.java
+    Author: Bo Kulbacki (rkulbacki@sandiego.edu)
+            Curtis Cheng(curtischeng@sandiego.edu)
+            Griffin Palmeri(gpalmeri@sandiego.edu)
+
+
+    Last Updated: 25 May 2022 Version 4
+
+*/
+
 public class ResistanceTraining extends StrengthTraining
 {
     private int bandStrength;
