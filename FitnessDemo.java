@@ -29,7 +29,7 @@ public class FitnessDemo
         Person member = new Person();
         
         //user is presented with a menu of choices, and their input is taken and then handled 
-        System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account \n");
+        System.out.println("Welcome to the Fitness Tracker App. \n Please choose from the following options: \n (1) Load your previous account \n (2) Create a new account -- Choose this if you are a first time user! \n");
         String loginChoice = userInput.next();
         userInput.nextLine();
         if (loginChoice.equals("1"))
@@ -37,8 +37,7 @@ public class FitnessDemo
             member = loadData();
         }
         else 
-        {
-               
+        {  
             member = createPerson();
             
             System.out.println(member);
@@ -119,7 +118,7 @@ public class FitnessDemo
     //createPerson is a method that allows the user to create their own "account"
     {
         try{
-            System.out.print("Please enter your name: ");
+            System.out.print("Please enter your first and last name separated by a space: ");
             String name = userInput.nextLine();
             System.out.print("\nPlease enter your height: ");
             String height = userInput.nextLine(); //float
@@ -275,7 +274,7 @@ public class FitnessDemo
     //This information is loaded in from a text file.
     {
         
-        System.out.println("What is your first name");
+        System.out.println("What is the name on your account?");
         String name = userInput.nextLine();
 
         try{
@@ -292,9 +291,11 @@ public class FitnessDemo
             personParameters[counter] = arrOfStr[1];
             counter++;
         }
+        
 
         myReader.close();
-    
+        //substring to correctly gather the name of the user 
+        personParameters[0] = personParameters[0].substring(personParameters[0].lastIndexOf(":")+2);
         Person newMember = new Person((String) personParameters[0],Float.valueOf(personParameters[1]), Float.valueOf(personParameters[2]), (String)personParameters[3],Float.valueOf(personParameters[4]));
         System.out.println("Welcome back");
         System.out.println(newMember);
@@ -364,13 +365,18 @@ public class FitnessDemo
 
        
         }
+        
+        
+        new File(name+"Workouts.txt").delete();
         myReader2.close();
+
 
         return newMember;
         }catch(IOException e){
-            System.out.println("File Not found");
+            System.out.println("Invalid Account Name.");
+            return loadData();
         }
-        return null;
+        //return null;
 
     }
 }

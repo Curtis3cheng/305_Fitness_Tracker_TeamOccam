@@ -14,7 +14,7 @@
     Last Updated: 25 May 2022 Version 4
 
 */
-abstract class Exercise extends Object //Exercise
+class Exercise extends Object //Exercise class is concrete. Further implementation could allow user to create their own type of workout with this as a conrete class. 
 {
     private String name;
     private String musclesUsed;
