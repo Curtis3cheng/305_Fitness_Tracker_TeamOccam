@@ -49,7 +49,7 @@ public class WalkingRunning extends Exercise
     }
 
     // Pace getter and setter
-    public float pace()
+    public float getPace()
     {
         return this.pace;
     }
@@ -60,7 +60,7 @@ public class WalkingRunning extends Exercise
     }
 
     // Cadence getter and setter
-    public int cadence()
+    public int getCadence()
     {
         return this.cadence;
     }
